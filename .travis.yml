@@ -56,10 +56,10 @@ matrix:
         - NAME='Website - master'
       node_js: 8
       script:
-      - git config --global user.email "$GIT_USER@users.noreply.github.com"
+      - git config --global user.email "$GH_GIT_USER@users.noreply.github.com"
       - git config --global user.name "Daniel Schmidt"
-      - echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-      - cd website && npm install && GIT_USER=$GIT_USER npm run publish-gh-pages
+      - echo "machine github.com login $GH_GIT_USER password $GH_GIT_TOKEN" > ~/.netrc
+      - cd website && npm install && GH_GIT_USER=$GH_GIT_USER npm run publish-gh-pages
 
 branches:
   only:
