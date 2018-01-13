@@ -59,7 +59,7 @@ matrix:
       - git config --global user.email "$GH_GIT_USER@users.noreply.github.com"
       - git config --global user.name "Daniel Schmidt"
       - echo "machine github.com login $GH_GIT_USER password $GH_GIT_TOKEN" > ~/.netrc
-      - cd website && npm install && GH_GIT_USER=$GH_GIT_USER npm run publish-gh-pages
+      - cd website && npm install && GH_GIT_USER=$GH_GIT_USER CURRENT_BRANCH=master USE_SSH=true npm run publish-gh-pages
 
 branches:
   only:
